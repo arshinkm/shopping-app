@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-style Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        #products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            color: #007185;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .product .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #B12704;
+        }
+
+        .product button {
+            background-color: #FFD814;
+            color: #111;
+            border: 1px solid #FCD200;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 3px;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .product button:hover {
+            background-color: #F7CA00;
+        }
+
+        .cart {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h2 {
+            font-size: 22px;
+        }
+
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart .total {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .cart button {
+            background-color: #FFA41C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .cart button:hover {
+            background-color: #F08804;
+        }
+
+        .quantity-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quantity-controls button {
+            padding: 5px;
+            margin: 0 5px;
+            background-color: #FFD814;
+            border: 1px solid #FCD200;
+            cursor: pointer;
+            font-weight: bold;
+            width: 30px;
+            text-align: center;
+        }
+
+        .quantity-controls button:hover {
+            background-color: #F7CA00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Amazon-style Shopping Cart</h1>
+    <div id="products"></div>
+
+    <h2>Your Cart</h2>
+    <div class="cart">
+        <ul id="cart-items" class="cart-list"></ul>
+        <p class="total">Total: INR <span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
